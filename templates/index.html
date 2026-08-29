@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceylon Compass — Sri Lanka Travel Guide</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <!-- Mermaid.js renders flowchart syntax into an SVG diagram in the browser -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🧭 Ceylon Compass</h1>
+      <p>Ask about any place or trip in Sri Lanka — add "itinerary" or "draw" for a route diagram.</p>
+    </header>
+
+    <div id="chat" class="chat"></div>
+
+    <form id="ask-form" class="input-bar">
+      <textarea
+        id="topic-input"
+        rows="1"
+        placeholder="e.g. Plan a 3-day trip from Colombo to Ella..."
+        autocomplete="off"
+      ></textarea>
+      <button type="submit" id="send-btn">Ask</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
